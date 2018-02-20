@@ -1,5 +1,7 @@
-p {
-  color: red;
-  font-size: 0.5em;
-  text-align: right
-}
+body {
+  color: yellow;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: Times New Roman cursive;
+  background-color: #A22BD9
+  }
