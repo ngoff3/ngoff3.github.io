@@ -15,14 +15,16 @@ let projectData = []
   }
 
 for (let i = 0; i < projectData.length; i++) {
-  createImageSrc(i)
+  let imageSrc = createImageSrc(i)
+  console.log(imageSrc)
 }
 
+$(document).ready(console.log('The page is ready!'))
 
 
 function createImageSrc (i) {
   if (projectData[i].hasThumbnail === true) {
-    console.log('images/ss-project-' + projectData[i].id + '.png')
+    return'images/ss-project-' + projectData[i].id + '.png'
   } else {
-    console.log('no-preview.png')
-}
+    return 'no-preview.png'}
+    }
