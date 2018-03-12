@@ -20,11 +20,3 @@ for (let i = 0; i < projectData.length; i++) {
 }
 
 $(document).ready(console.log('The page is ready!'))
-
-
-function createImageSrc (i) {
-  if (projectData[i].hasThumbnail === true) {
-    return'images/ss-project-' + projectData[i].id + '.png'
-  } else {
-    return 'no-preview.png'}
-    }
