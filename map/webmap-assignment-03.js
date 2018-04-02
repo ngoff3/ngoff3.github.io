@@ -9,18 +9,32 @@ let polygon = L.polygon([
 ]).addTo(mymap)
 
 var myGreenIcon = L.icon({
-  iconUrl: 'leaf-green.png',
-  shadowUrl: 'leaf-shadow.png',
+  iconUrl: 'webmapassignment3photo.png',
+
   iconSize:     [38, 95], // size of the icon
-  shadowSize:   [50, 64], // size of the shadow
+
   iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-  shadowAnchor: [4, 62],  // the same for the shadow
+
   popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 })
 
-let markerCoords = [32.795504,	-90.571457]
+let markerCoords = [32.82054,	-90.597871]
 let markerOptions = { icon: myGreenIcon}
 let myMarker = L.marker(markerCoords, markerOptions).addTo(mymap)
+
+let refuge = L.marker(markerCoords, markerOptions).addTo(mymap)
+
+let polygonCoords = [
+  [32.892421,	-90.656601],
+  [32.887808,	-90.509659],
+  [32.723902,	-90.597549]
+]
+let myStyle = {
+  color: 'orange',
+  fillColor: 'yellow',
+  weight: 1,
+  dashArray: '3'
+}
 
 poi.bindPopup('Panther Swamp')
 polygon.bindPopup('Mississippi Wildlife Refuge')

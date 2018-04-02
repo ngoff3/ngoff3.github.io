@@ -1,5 +1,5 @@
 //let someName = L.map('your-map-div-id').setView([yourLat, yourLon], yourZoom)
-let mymap = L.map('natesmapid').setView([32.804739, -90.593429], 11)
+let mymap = L.map('natesmapid3').setView([32.804739, -90.593429], 11)
 let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
 L.tileLayer(basemapUrl).addTo(mymap)
 let poi = L.marker([32.795504,	-90.571457]).addTo(mymap)
