@@ -3,9 +3,9 @@ let basemapUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Ima
 L.tileLayer(basemapUrl).addTo(statemap)
 
 let stateStyle = function (state) {
-  let age = state.properties.MED_AGE
+  let age = state.properties.AGE_UNDER5
   let stateColor = 'Yellow'
-  if (age < 38)  {
+  if (age < 5)  {
     stateColor = 'Purple'
   }
   let formatting = {
@@ -17,8 +17,8 @@ let stateStyle = function (state) {
 }
 let createPopup = function (state, layer) {
   let name = state.properties.STATE_NAME
-  let age = state.properties.MED_AGE
-  layer.bindPopup('Median age of ' + name + ': ' + age + '<br>National average: 38')
+  let age = state.properties.AGE_UNDER5_AGE
+  layer.bindPopup('Population Under Age 5 ' + name + ': ' + age + '<br>US Total Under Age 5: 23,000,000')
 
 }
 
