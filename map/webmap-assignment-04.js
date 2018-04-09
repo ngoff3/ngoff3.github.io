@@ -5,7 +5,7 @@ L.tileLayer(basemapUrl).addTo(statemap)
 let stateStyle = function (state) {
   let age = state.properties.AGE_UNDER5
   let stateColor = 'Red'
-  if (age > 5)  {
+  if (age > 500000)  {
     stateColor = 'Blue'
   }
   let formatting = {
