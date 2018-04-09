@@ -17,7 +17,7 @@ let stateStyle = function (state) {
 }
 let createPopup = function (state, layer) {
   let name = state.properties.STATE_NAME
-  let age = state.properties.AGE_UNDER5_AGE
+  let age = state.properties.AGE_UNDER5
   layer.bindPopup('Population Under Age 5 ' + name + ': ' + age + '<br>US Total Under Age 5: 23,000,000')
 
 }
