@@ -1,20 +1,20 @@
 let statemap = L.map('natesmapid5').setView([39, -98], 4)
 
-let grayBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').
-let satelliteBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}').
+let grayBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}')
+let satelliteBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')
 let worldterrainBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}')
 
 let myGraymap = L.tileLayer(grayBasemap).addTo(statemap)
-let mySatellitemap = L.titleLayer(satelliteBasemap)
-let myWorldterrainmap = L.titleLayer(worldterrainBasemap)
+let mySatellitemap = L.tileLayer(satelliteBasemap)
+let myWorldterrainmap = L.tileLayer(worldterrainBasemap)
 
 let myBasemaps = {
-  'Gray Basemap' : myGraymp,
+  'Gray Basemap' : myGraymap,
   'Satellite Basemap' : mySatellitemap,
   'Terrain Basemap' : myWorldterrainmap
 }
 
-L.control.layers(myBasemaps).addTo(stateMap)
+L.control.layers(myBasemaps).addTo(statemap)
 
 let stateStyle = function (state) {
   let age = state.properties.AGE_UNDER5
