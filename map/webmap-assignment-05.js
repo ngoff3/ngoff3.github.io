@@ -1,9 +1,17 @@
 let statemap = L.map('natesmapid5').setView([39, -98], 4)
-let grayBasemap = L.titleLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}').addTo(statemap)
-let satelliteBasemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}').addTo(statemap)
+
+let grayBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}').
+let satelliteBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}').
+let worldterrainBasemap = ('https://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer/tile/{z}/{y}/{x}')
+
+let myGraymap = L.tileLayer(grayBasemap).addTo(statemap)
+let mySatellitemap = L.titleLayer(satelliteBasemap)
+let myWorldterrainmap = L.titleLayer(worldterrainBasemap)
+
 let myBasemaps = {
-  'Light basemap': grayBasemap,
-  'Dark basemap': satelliteBasemap
+  'Gray Basemap' : myGraymp,
+  'Satellite Basemap' : mySatellitemap,
+  'Terrain Basemap' : myWorldterrainmap
 }
 
 L.control.layers(myBasemaps).addTo(stateMap)
